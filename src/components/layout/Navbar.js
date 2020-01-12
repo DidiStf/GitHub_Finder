@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ icon, title }) => {
-    return (
+const Navbar = ({ icon, title }) => (
         <nav className="navbar bg-primary">
             <h1>
                 <i className = { icon }> </i> { title }
@@ -17,8 +16,7 @@ const Navbar = ({ icon, title }) => {
                 </li>
             </ul>
         </nav>
-    );
-};
+);
 
 Navbar.propTypes = {
     title: PropTypes.string.isRequired,
