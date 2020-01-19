@@ -8,9 +8,9 @@ const Search = () => {
 
     const [text, setText] = useState('');
 
-   const onChange = (e) => {
+    const onChange = (e) => {
         setText(e.target.value)
-    } 
+    };
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -19,33 +19,32 @@ const Search = () => {
         } else {
              githubContext.searchUsers(text);
             setText('');
-        }
-       
-    }
+        };
+    };
 
-        return (
-            <div>
-                <form 
-                    className="form"
-                    onSubmit={onSubmit}
-                >
-                    <input 
-                        type="text" 
-                        name="text" 
-                        placeholder="Search Users..."
-                        value={text}
-                        onChange={onChange}
-                    />
-                    <input 
-                        type="submit" 
-                        value="Search" 
-                        className="btn btn-dark btn-block" />
-                </form>
-                {githubContext.users.length > 0 && (<button className="btn btn-light btn-block" onClick={githubContext.clearUsers}>
+    return (
+        <div>
+            <form 
+                className="form"
+                onSubmit={onSubmit} >
+                <input 
+                    type="text" 
+                    name="text" 
+                    placeholder="Search Users..."
+                    value={text}
+                    onChange={onChange}
+                />
+                <input 
+                    type="submit" 
+                    value="Search" 
+                    className="btn btn-dark btn-block" 
+                />
+            </form>
+            {githubContext.users.length > 0 && (<button className="btn btn-light btn-block" onClick={githubContext.clearUsers}>
                 Clear
-                </button>)}
-            </div>
-        )
+            </button>)}
+        </div>
+    );
 };
 
 

@@ -19,15 +19,15 @@ if(process.env.NODE_ENV !== 'production'){
 } else {
     githubClientId = process.env.GITHUB_CLIENT_ID;
     githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-}
+};
 
 const GithubState = props => {
     const initialState = {
         users: [],
         user: {},
         repos: [],
-        loading: false
-    }
+        loading: false,
+    };
 
     const [state, dispatch] = useReducer(GithubReducer, initialState);
 
@@ -53,7 +53,7 @@ const GithubState = props => {
     
           dispatch({
               type: GET_USER,
-              payload: res.data
+              payload: res.data,
           });
       };
 
@@ -85,9 +85,8 @@ const GithubState = props => {
             clearUsers,
             getUser,
             getUserRepos
-        }}
-    >
-        {props.children}
+        }} >
+            {props.children}
     </GithubContext.Provider>
 };
 

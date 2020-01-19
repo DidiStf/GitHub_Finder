@@ -7,6 +7,6 @@ const Repos = ({ repos }) => repos.map(repo => <RepoItem repo={repo} key={repo.i
 
 Repos.propTypes = {
     repos: PropTypes.array.isRequired,
-}
+};
 
 export default Repos;
