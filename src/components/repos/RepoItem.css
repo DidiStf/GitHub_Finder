@@ -1,0 +1,6 @@
+.RepoItem {
+  padding: 1rem;
+  border: 1px dotted var(--dark-color);
+  border-radius: 10px;
+  margin: 0.7rem 0;
+}
