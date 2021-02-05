@@ -43,9 +43,29 @@ img {
   width: 100%;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
 .container {
   margin: auto;
-  overflow: hidden;
   padding: 1rem 10%;
   background-image: url(/cup-of-coffee-1280537_1280.jpg);
   background-repeat: no-repeat;
